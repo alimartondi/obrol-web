@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import { buttonVariants } from "@/components/ui/button";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 
 import clsx from "clsx";
 import SplitText from "@/components/reactbits/SplitText";
+import AnimatedContent from "@/components/reactbits/AnimatedContent";
 
 export default function Hero() {
   return (
@@ -44,13 +46,38 @@ export default function Hero() {
           {/* <h1 className="primary-title">
             Convert Every On-ground Conversation into Actionable Intelligence
           </h1> */}
-          <p className="max-w-xl">
-            Obrol is the first AI platform that turns frontline conversations
-            into the ground truth your teams can rely on
-          </p>
+          <AnimatedContent
+            distance={50}
+            direction="vertical"
+            reverse={false}
+            duration={1.2}
+            ease="power3.out"
+            initialOpacity={0.1}
+            animateOpacity
+            scale={1}
+            threshold={0.1}
+            delay={0.2}
+          >
+            <p className="max-w-xl">
+              Obrol is the first AI platform that turns frontline conversations
+              into the ground truth your teams can rely on
+            </p>
+          </AnimatedContent>
         </div>
 
-        <div className="relative z-10 flex justify-center gap-4 mt-6 lg:mt-8">
+        <AnimatedContent
+          distance={50}
+          direction="vertical"
+          reverse={false}
+          duration={1.2}
+          ease="power3.out"
+          initialOpacity={0.1}
+          animateOpacity
+          scale={1}
+          threshold={0}
+          delay={0.2}
+          className="relative z-10 flex justify-center gap-4 mt-8"
+        >
           <Link
             href={"/join-witlist"}
             className={clsx(
@@ -69,9 +96,30 @@ export default function Hero() {
           >
             See demo
           </Link>
-        </div>
-
-        <div className="w-full relative z-10 aspect-video bg-accent rounded-lg mt-10 lg:mt-20"></div>
+        </AnimatedContent>
+        <AnimatedContent
+          distance={50}
+          direction="vertical"
+          reverse={false}
+          duration={1.2}
+          ease="power3.out"
+          initialOpacity={0.1}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          delay={0.3}
+          className="relative z-10 mt-16 lg:mt-20"
+        >
+          <Image
+            src="/images/Obrol-Dashboard.svg"
+            alt="Dashboard"
+            width={1512}
+            height={997}
+            priority
+            quality={100}
+            className="object-cover"
+          />
+        </AnimatedContent>
       </div>
       <BackgroundRippleEffect />
     </section>

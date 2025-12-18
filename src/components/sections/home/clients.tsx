@@ -44,7 +44,7 @@ const imageLogos = [
 
 export default function Clients() {
   return (
-    <div className="py-12 bg-primary">
+    <div className="py-8 lg:py-12 bg-primary">
       <LogoLoop
         logos={imageLogos}
         speed={120}

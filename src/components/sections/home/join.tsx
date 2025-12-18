@@ -17,7 +17,7 @@ export default function Join() {
             <p>Apply to join the early pilot.</p>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4 w-full justify-center">
+          <div className="flex flex-col md:flex-row gap-4 w-full justify-center mt-2">
             <Link
               href={"/join-witlist"}
               className={clsx(
