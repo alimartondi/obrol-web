@@ -32,15 +32,15 @@ export default function Header() {
     <header
       className={clsx(
         isScrolled ? "px-3 md:px-10" : "",
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-in-out"
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-in-out",
       )}
     >
       <nav
         className={clsx(
           isScrolled
-            ? "bg-white/80 backdrop-blur-md shadow-lg max-w-[1440px]"
-            : "bg-transparent max-w-378",
-          "flex justify-between items-center  mx-auto rounded-md mt-2 md:mt-3 py-3 lg:py-4 px-5 md:px-6 transition-all duration-300 ease-in-out"
+            ? "bg-white/80 backdrop-blur-lg max-w-[1440px]"
+            : "bg-transparent max-w-378 border-transparent",
+          "border flex justify-between items-center  mx-auto rounded-md mt-2 py-3 lg:py-3 px-4 transition-all duration-300 ease-in-out",
         )}
       >
         <Link href="/" className="flex gap-2 items-center text-primary">

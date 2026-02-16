@@ -14,10 +14,10 @@ export default function Hero() {
   return (
     <section className="relative pt-56 xl:pt-64 lg:pb-16 pb-12">
       <div className="container-wrapper">
-        <div className="relative max-w-5xl md:text-center gap-8 flex flex-col items-center z-10 mx-auto">
+        <div className="relative max-w-5xl md:text-center gap-8 flex flex-col z-10 mx-auto">
           <SplitText
             tag="h1"
-            text="Convert Every On-ground Conversation into Actionable Intelligence"
+            text="Convert Conversations with Your Customers into Commercial Intelligence"
             className="primary-title overflow-visible text-left! md:text-center!"
             delay={100}
             duration={2}
@@ -29,24 +29,27 @@ export default function Hero() {
             rootMargin="-100px"
           />
 
-          {/* <SplitText
-            text=" Obrol is the first AI platform that turns frontline conversations
-            into the ground truth your teams can rely on"
-            className="font-medium max-w-xl text-left! md:text-center!"
+          <SplitText
+            tag="p"
+            text="Obrol enables you to perform analytics on real world conversations
+              with your customers. Extract the signals from the noise and turn
+              the voice of your customers into actionable insights that can grow
+              your sales."
+            className="max-w-3xl text-left! md:text-center!"
             delay={100}
-            duration={0.6}
+            duration={2}
             ease="power3.out"
             splitType="lines"
             from={{ opacity: 0, y: 40 }}
             to={{ opacity: 1, y: 0 }}
             threshold={0.1}
             rootMargin="-100px"
-          /> */}
+          />
 
           {/* <h1 className="primary-title">
             Convert Every On-ground Conversation into Actionable Intelligence
           </h1> */}
-          <AnimatedContent
+          {/* <AnimatedContent
             distance={50}
             direction="vertical"
             reverse={false}
@@ -58,11 +61,13 @@ export default function Hero() {
             threshold={0.1}
             delay={0.2}
           >
-            <p className="max-w-xl">
-              Obrol is the first AI platform that turns frontline conversations
-              into the ground truth your teams can rely on
+            <p className="max-w-3xl text-pretty">
+              Obrol enables you to perform analytics on real world conversations
+              with your customers. Extract the signals from the noise and turn
+              the voice of your customers into actionable insights that can grow
+              your sales.
             </p>
-          </AnimatedContent>
+          </AnimatedContent> */}
         </div>
 
         <AnimatedContent
@@ -82,7 +87,7 @@ export default function Hero() {
             href={"/join-witlist"}
             className={clsx(
               buttonVariants({ variant: "default", size: "lg" }),
-              "flex-1 md:flex-none"
+              "flex-1 md:flex-none rounded-lg",
             )}
           >
             Join waitlist
@@ -91,7 +96,7 @@ export default function Hero() {
             href={"/join-witlist"}
             className={clsx(
               buttonVariants({ variant: "secondary", size: "lg" }),
-              "flex-1 md:flex-none"
+              "flex-1 md:flex-none",
             )}
           >
             See demo
@@ -116,7 +121,6 @@ export default function Hero() {
             width={1512}
             height={997}
             priority
-            quality={100}
             className="object-cover"
           />
         </AnimatedContent>

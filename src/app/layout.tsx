@@ -3,6 +3,8 @@ import { Open_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/header";
 import Footer from "@/components/layouts/footer";
+import LenisProvider from "@/providers/lenis-provider";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -28,11 +30,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} antialiased`}>
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+    <html
+      lang="en"
+      className={`${poppins.variable} antialiased`}
+      suppressHydrationWarning
+    >
+      <body className="antialiased">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LenisProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </LenisProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
