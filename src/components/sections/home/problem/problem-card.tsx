@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import type { ProblemItem } from "@/types/problem";
+import type { ProblemItem } from "@/types/data";
 
 type ProblemCardProps = ProblemItem;
 

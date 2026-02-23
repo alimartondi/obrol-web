@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import ReactLenis from "lenis/react";
+import Image from "next/image";
 import React, { useRef } from "react";
 
 const projects = [
@@ -31,6 +32,7 @@ const StickyCard_001 = ({
   i,
   title,
   src,
+  description,
   progress,
   range,
   targetScale,
@@ -38,6 +40,7 @@ const StickyCard_001 = ({
   i: number;
   title: string;
   src: string;
+  description: string;
   progress: any;
   range: [number, number];
   targetScale: number;
@@ -58,21 +61,21 @@ const StickyCard_001 = ({
         }}
         className="rounded-4xl relative flex origin-top flex-col overflow-hidden"
       >
-        <div className="bg-accent rounded-2xl grid grid-cols-2 p-12 gap-16 overflow-hidden">
-          <div>
-            <div className="aspect-square bg-muted rounded-xl overflow-hidden">
-              <img src={src} alt="" className="object-cover h-full w-full" />
-            </div>
+        <div className="relative bg-muted rounded-2xl grid lg:grid-cols-2 p-6 lg:p-12 gap-6 lg:gap-16 overflow-hidden">
+          <div
+            className={`${i % 2 === 0 ? "order-2" : "order-1"} relative aspect-square bg-muted rounded-xl overflow-hidden`}
+          >
+            <Image
+              src={src}
+              alt={title}
+              fill
+              sizes="(max-width: 768px)50vw, 100vw"
+              className="object-cover h-auto w-full"
+            />
           </div>
-          <div className="space-y-4 pt-16">
-            <h3 className="text-5xl font-semibold">01</h3>
-            <p>
-              On-Ground Intelligence is a new category built entirely from
-              frontline conversations. Instead of relying on reports, summaries,
-              or assumptions, Obrol captures real-world voice interactions from
-              sales promoters, field teams, and frontline staff in any language
-              and environment.
-            </p>
+          <div className={`${i % 2 === 0 ? "order-1" : "order-2"} "space-y-4"`}>
+            <h3 className="text-5xl font-semibold">{i + 1}</h3>
+            <p>{description}</p>
           </div>
         </div>
       </motion.div>
@@ -80,46 +83,46 @@ const StickyCard_001 = ({
   );
 };
 
-const Skiper16 = () => {
-  const container = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
+// const Skiper16 = () => {
+//   const container = useRef<HTMLDivElement>(null);
+//   const { scrollYProgress } = useScroll({
+//     target: container,
+//     offset: ["start start", "end end"],
+//   });
 
-  return (
-    <ReactLenis root>
-      <main
-        ref={container}
-        className="relative flex w-full flex-col items-center justify-center pb-[100vh] pt-[50vh]"
-      >
-        <div className="absolute left-1/2 top-[10%] grid -translate-x-1/2 content-start justify-items-center gap-6 text-center">
-          <span className="after:from-background after:to-foreground relative max-w-[12ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-gradient-to-b after:content-['']">
-            scroll down to see card stack
-          </span>
-        </div>
-        {projects.map((project, i) => {
-          const targetScale = Math.max(
-            0.5,
-            1 - (projects.length - i - 1) * 0.1,
-          );
-          return (
-            <StickyCard_001
-              key={`p_${i}`}
-              i={i}
-              {...project}
-              progress={scrollYProgress}
-              range={[i * 0.25, 1]}
-              targetScale={targetScale}
-            />
-          );
-        })}
-      </main>
-    </ReactLenis>
-  );
-};
+//   return (
+//     <ReactLenis root>
+//       <main
+//         ref={container}
+//         className="relative flex w-full flex-col items-center justify-center pb-[100vh] pt-[50vh]"
+//       >
+//         <div className="absolute left-1/2 top-[10%] grid -translate-x-1/2 content-start justify-items-center gap-6 text-center">
+//           <span className="after:from-background after:to-foreground relative max-w-[12ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-gradient-to-b after:content-['']">
+//             scroll down to see card stack
+//           </span>
+//         </div>
+//         {projects.map((project, i) => {
+//           const targetScale = Math.max(
+//             0.5,
+//             1 - (projects.length - i - 1) * 0.1,
+//           );
+//           return (
+//             <StickyCard_001
+//               key={`p_${i}`}
+//               i={i}
+//               {...project}
+//               progress={scrollYProgress}
+//               range={[i * 0.25, 1]}
+//               targetScale={targetScale}
+//             />
+//           );
+//         })}
+//       </main>
+//     </ReactLenis>
+//   );
+// };
 
-export { Skiper16, StickyCard_001 };
+export { StickyCard_001 };
 
 /**
  * Skiper 16 StickyCard_001 — React + Framer Motion

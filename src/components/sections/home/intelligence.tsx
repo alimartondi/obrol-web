@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { buttonVariants } from "@/components/ui/button";
 
-import type { IntelligenceItem } from "@/types/problem";
+import type { IntelligenceItem } from "@/types/data";
 
 import {
   Card,
@@ -31,9 +31,10 @@ export default function Intelligence() {
 
 function IntelligenceCard({ title, description }: IntelligenceItem) {
   return (
-    <Card className="border-0 bg-muted aspect-4/5">
-      <CardContent className="grid gap-4">
-        <CardTitle className="text-primary">{title}</CardTitle>
+    <Card className="rounded-xl border-0 bg-muted p-3 gap-0">
+      <div className="aspect-5/4 bg-linear-to-b from-white rounded-md"></div>
+      <CardContent className="grid gap-3 pb-3 px-3">
+        <CardTitle className="text-primary text-2xl">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardContent>
     </Card>

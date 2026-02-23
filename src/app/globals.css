@@ -73,7 +73,7 @@
   }
 
   .primary-title {
-    @apply text-4xl  lg:text-6xl xl:text-7xl font-semibold;
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold;
   }
 
   .secondary-title {
@@ -175,6 +175,29 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+
+/* === Swiper === */
+
+.swiper-pagination-bullet {
+  background-color: var(--primary);
+}
+
+.swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 8px;
+  background-color: var(--primary);
+}
+
+.light-swiper .swiper-pagination-bullet-active,
+.light-swiper .swiper-pagination-bullet {
+  background-color: #fff;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--primary);
+}
+
+/* === End of Swiper === */
 
 /* Aceternity */
 @theme inline {

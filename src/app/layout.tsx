@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Open_Sans, Poppins } from "next/font/google";
+
+import "swiper/css";
+import "swiper/css/pagination";
 import "./globals.css";
+
 import Header from "@/components/layouts/header";
 import Footer from "@/components/layouts/footer";
 import LenisProvider from "@/providers/lenis-provider";
@@ -38,7 +42,7 @@ export default function RootLayout({
       <body className="antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
