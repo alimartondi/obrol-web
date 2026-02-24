@@ -13,7 +13,7 @@ const Introduction = () => {
   });
 
   return (
-    <section className="pt-12 pb-12 lg:pt-[60px] lg:pb-[300px]">
+    <section className="pt-16 pb-16 lg:pt-[60px] lg:pb-[300px]">
       <div className="container-wrapper relative">
         <div className="text-center max-w-4xl mx-auto lg:translate-y-[26px] mb-12">
           <h2 className="secondary-title">

@@ -10,12 +10,13 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
+import ChatAnimation from "@/components/elements/chat-animation";
 
 export default function Intelligence() {
   return (
-    <section className="pt-12 lg:py-16 pb-16 lg:pb-24">
-      <div className="container-wrapper space-y-14">
-        <div className="text-center max-w-4xl mx-auto translate-y-[26px]">
+    <section className="py-16 lg:py-21.5">
+      <div className="container-wrapper space-y-12">
+        <div className="text-center max-w-4xl mx-auto lg:translate-y-[26px]">
           <h2 className="secondary-title">On-Ground Intelligence</h2>
         </div>
 
@@ -31,11 +32,13 @@ export default function Intelligence() {
 
 function IntelligenceCard({ title, description }: IntelligenceItem) {
   return (
-    <Card className="rounded-xl border-0 bg-muted p-3 gap-0">
-      <div className="aspect-5/4 bg-linear-to-b from-white rounded-md"></div>
+    <Card className="rounded-xl border-0 bg-muted p-3 xl:p-3 gap-0">
+      <div className="aspect-5/4 bg-linear-to-b from-white rounded-md">
+        <ChatAnimation />
+      </div>
       <CardContent className="grid gap-3 pb-3 px-3">
         <CardTitle className="text-primary text-2xl">{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className="text-pretty">{description}</CardDescription>
       </CardContent>
     </Card>
   );

@@ -44,7 +44,7 @@ const imageLogos = [
 
 export default function Clients() {
   return (
-    <div className="py-8 lg:py-12 bg-primary">
+    <section className="py-8 lg:py-12 bg-primary">
       <LogoLoop
         logos={imageLogos}
         speed={120}
@@ -57,6 +57,6 @@ export default function Clients() {
         fadeOutColor="#0A52B4"
         ariaLabel="Technology partners"
       />
-    </div>
+    </section>
   );
 }

@@ -12,9 +12,27 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 
 export default function Hero() {
   return (
-    <section className="relative pt-56 xl:pt-64 lg:pb-16 pb-12">
+    <section className="relative pt-52 xl:pt-64 lg:pb-16 pb-12">
       <div className="container-wrapper">
-        <div className="relative max-w-5xl md:text-center gap-8 flex flex-col z-10 mx-auto">
+        <div className="relative max-w-5xl md:text-center md:justify-center gap-6 flex flex-col z-10 mx-auto">
+          <AnimatedContent
+            distance={50}
+            direction="vertical"
+            reverse={false}
+            duration={1.2}
+            ease="power3.out"
+            initialOpacity={0.1}
+            animateOpacity
+            scale={1}
+            threshold={0}
+            delay={0.2}
+            className="relative z-10"
+          >
+            <span className="bg-primary/15 w-fit rounded-full py-1.5 px-5 h-9 inline-flex items-center justify-center font-medium text-primary">
+              Lorem ipsum
+            </span>
+          </AnimatedContent>
+
           <SplitText
             tag="h1"
             text="Convert Conversations with Your Customers into Commercial Intelligence"
@@ -35,7 +53,7 @@ export default function Hero() {
               with your customers. Extract the signals from the noise and turn
               the voice of your customers into actionable insights that can grow
               your sales."
-            className="max-w-3xl text-left! md:text-center!"
+            className="max-w-3xl text-left! md:text-center! md:mx-auto"
             delay={100}
             duration={2}
             ease="power3.out"

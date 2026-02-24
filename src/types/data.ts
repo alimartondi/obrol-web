@@ -18,5 +18,5 @@ export interface Teams {
   name: string;
   image: string;
   role: string;
-  description: string;
+  description: string[];
 }

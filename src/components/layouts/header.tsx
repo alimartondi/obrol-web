@@ -40,7 +40,7 @@ export default function Header() {
           isScrolled
             ? "bg-white/80 backdrop-blur-lg max-w-[1440px]"
             : "bg-transparent max-w-378 border-transparent",
-          "border flex justify-between items-center  mx-auto rounded-md mt-2 py-3 lg:py-3 px-4 transition-all duration-300 ease-in-out",
+          "border flex justify-between items-center mx-auto rounded-lg mt-2.5 py-3 lg:py-3 px-4 transition-all duration-300 ease-in-out",
         )}
       >
         <Link href="/" className="flex gap-2 items-center text-primary">

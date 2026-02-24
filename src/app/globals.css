@@ -183,7 +183,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  width: 20px;
+  width: 24px;
   border-radius: 8px;
   background-color: var(--primary);
 }

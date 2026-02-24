@@ -2,12 +2,13 @@ import { SolutionItems } from "@/types/data";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { StickyScrollRevealDemo } from "./solution-desktop";
 
 export default function Solution() {
   return (
     <section className="py-16 lg:py-21.5">
       <div className="container-wrapper grid gap-8">
-        <div className="grid gap-6">
+        <div className="grid lg:hidden gap-6">
           <div className="relative aspect-square bg-accent rounded-xl overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1744740606260-1881836349d2?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -28,6 +29,34 @@ export default function Solution() {
           </div>
         </div>
 
+        {/* <div className="grid grid-cols-2 gap-16">
+          <div className="grid gap-12">
+            <div className="space-y-4">
+              <h2 className="secondary-title">
+                Improved Commercial Performance
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem
+                veniam dignissimos eius vel voluptates aut animi. In doloremque
+                ea magni similique tempore iusto nostrum aspernatur delectus
+                soluta? Suscipit, vero aliquam?
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h2 className="secondary-title">
+                Improved Commercial Performance
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem
+                veniam dignissimos eius vel voluptates aut animi. In doloremque
+                ea magni similique tempore iusto nostrum aspernatur delectus
+                soluta? Suscipit, vero aliquam?
+              </p>
+            </div>
+          </div>
+          <div className="aspect-square bg-accent rounded-xl"></div>
+        </div> */}
+
         {solutions.map((solution, index) => (
           <SolutionCard
             key={index}
@@ -37,6 +66,7 @@ export default function Solution() {
           />
         ))}
 
+        {/* <StickyScrollRevealDemo /> */}
         {/* <div className="flex gap-6">
           <div className="w-8/12 bg-accent h-[550px] rounded-xl p-8 space-y-4">
             <h3 className="text-5xl font-medium">Built for the Frontline</h3>

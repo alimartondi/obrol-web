@@ -1,21 +1,20 @@
 import clsx from "clsx";
 import Link from "next/link";
-import React from "react";
 import { buttonVariants } from "@/components/ui/button";
 
 import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {
   return (
-    <footer className="pb-12 pt-16 lg:pt-21.5 bg-primary">
+    <footer className="pb-10 lg:pb-12 pt-16 lg:pt-21.5 bg-primary">
       <div className="container-wrapper space-y-12">
         <div className="max-w-5xl mx-auto text-center text-white grid gap-4">
           <h2 className="secondary-title">Get Early Access</h2>
-          <p>
+          <p className="text-pretty">
             Obrol is currently piloting with selected partners across fintech,
             MSME, research, and enterprise sectors.
           </p>
-          <div className="flex gap-4 w-full justify-center mt-4">
+          <div className="flex gap-4 w-full justify-center mt-2">
             <Link
               href={"/join-witlist"}
               className={clsx(
@@ -26,6 +25,18 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+
+        <ul className="text-center text-accent space-y-3">
+          <h6 className="text-xl font-medium">Sections</h6>
+          <li className="text-lg font-medium text-muted-foreground">
+            Introduction
+          </li>
+          <li className="text-lg font-medium text-muted-foreground">Problem</li>
+          <li className="text-lg font-medium text-muted-foreground">
+            Solution
+          </li>
+          <li className="text-lg font-medium text-muted-foreground">People</li>
+        </ul>
 
         <div className="flex justify-center gap-2">
           <SocialIcon
@@ -51,13 +62,11 @@ export default function Footer() {
           />
         </div>
 
-        <div className="text-center space-y-3">
-          <div className="text-white">
-            <p className="text-muted">
-              &copy; {new Date().getFullYear()} | All rights reserved
-            </p>
-          </div>
-          <p className="text-muted">powered by Obrol</p>
+        <div className="text-center flex justify-between">
+          <p className="text-muted/75">
+            &copy; {new Date().getFullYear()} | All rights reserved
+          </p>
+          <p className="text-muted/75">powered by Obrol</p>
         </div>
       </div>
     </footer>

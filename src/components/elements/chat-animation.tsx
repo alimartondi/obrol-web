@@ -22,11 +22,11 @@ export default function ChatAnimation() {
   return (
     <div
       onMouseEnter={() => setHoverKey((k) => k + 1)}
-      className="relative p-6 bg-muted rounded-xl grid gap-4 h-full"
+      className="relative p-6 bg-white rounded-xl grid gap-4 h-full"
     >
       <h3 className="font-medium">Transcript</h3>
 
-      <div className="bg-white rounded-lg p-6 grid gap-4 overflow-hidden h-[432px]">
+      <div className="rounded-lg p-6 grid gap-4 overflow-hidden h-[432px]">
         {messages.map((msg, index) => (
           <AnimatedContent
             key={`${hoverKey}-${msg.id}`} // ⬅️ REMOUNT SAAT HOVER
