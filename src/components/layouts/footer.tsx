@@ -26,16 +26,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <ul className="text-center text-accent space-y-3">
+        <ul className="text-center text-muted space-y-3">
           <h6 className="text-xl font-medium">Sections</h6>
-          <li className="text-lg font-medium text-muted-foreground">
-            Introduction
-          </li>
-          <li className="text-lg font-medium text-muted-foreground">Problem</li>
-          <li className="text-lg font-medium text-muted-foreground">
-            Solution
-          </li>
-          <li className="text-lg font-medium text-muted-foreground">People</li>
+          <li className="text-accent/75">Introduction</li>
+          <li className="text-accent/75">Problem</li>
+          <li className="text-accent/75">Solution</li>
+          <li className="text-accent/75">People</li>
         </ul>
 
         <div className="flex justify-center gap-2">
@@ -62,11 +58,15 @@ export default function Footer() {
           />
         </div>
 
-        <div className="text-center flex justify-between">
-          <p className="text-muted/75">
-            &copy; {new Date().getFullYear()} | All rights reserved
-          </p>
-          <p className="text-muted/75">powered by Obrol</p>
+        <div className="grid gap-4">
+          <hr className="opacity-50" />
+
+          <div className="text-center flex justify-between">
+            <p className="text-muted/75">
+              &copy; {new Date().getFullYear()} | All rights reserved
+            </p>
+            <p className="text-muted/75">powered by Obrol</p>
+          </div>
         </div>
       </div>
     </footer>

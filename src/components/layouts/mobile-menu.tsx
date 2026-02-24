@@ -13,6 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { SwitchToggleTheme } from "../themes/switch-toggle-theme";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -67,6 +68,10 @@ export default function MobileMenu() {
             </Link>
           </li>
         </ul>
+
+        <div className="mt-auto p-5">
+          <SwitchToggleTheme />
+        </div>
       </SheetContent>
     </Sheet>
   );

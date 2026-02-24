@@ -40,18 +40,18 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="antialiased">
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >
-          <LenisProvider>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </LenisProvider>
-        </ThemeProvider>
+        > */}
+        <LenisProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </LenisProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

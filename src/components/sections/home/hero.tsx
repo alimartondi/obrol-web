@@ -15,7 +15,7 @@ export default function Hero() {
     <section className="relative pt-52 xl:pt-64 lg:pb-16 pb-12">
       <div className="container-wrapper">
         <div className="relative max-w-5xl md:text-center md:justify-center gap-6 flex flex-col z-10 mx-auto">
-          <AnimatedContent
+          {/* <AnimatedContent
             distance={50}
             direction="vertical"
             reverse={false}
@@ -28,10 +28,10 @@ export default function Hero() {
             delay={0.2}
             className="relative z-10"
           >
-            <span className="bg-primary/15 w-fit rounded-full py-1.5 px-5 h-9 inline-flex items-center justify-center font-medium text-primary">
-              Lorem ipsum
+            <span className="bg-primary/10 w-fit rounded-full py-1.5 px-4 h-10 inline-flex items-center justify-center font-medium text-primary border border-primary/35">
+              Welcome to Obrol
             </span>
-          </AnimatedContent>
+          </AnimatedContent> */}
 
           <SplitText
             tag="h1"
@@ -49,11 +49,8 @@ export default function Hero() {
 
           <SplitText
             tag="p"
-            text="Obrol enables you to perform analytics on real world conversations
-              with your customers. Extract the signals from the noise and turn
-              the voice of your customers into actionable insights that can grow
-              your sales."
-            className="max-w-3xl text-left! md:text-center! md:mx-auto"
+            text="Obrol enables you to perform analytics on real world conversations with your customers. Extract the signals from the noise and turn the voice of your customers into actionable insights that can grow your sales."
+            className="max-w-3xl text-left! md:text-center! md:mx-auto pr-4"
             delay={100}
             duration={2}
             ease="power3.out"

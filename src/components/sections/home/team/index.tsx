@@ -4,7 +4,7 @@ import { Teams } from "@/types/data";
 export default function Team() {
   return (
     <section className="py-12 lg:py-16 overflow-hidden">
-      <div className="container-wrapper mb-12 text-center">
+      <div className="container-wrapper mb-12 lg:mb-16 text-center">
         <h2 className="secondary-title">Who is Obrol</h2>
       </div>
 

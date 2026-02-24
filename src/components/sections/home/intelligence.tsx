@@ -15,8 +15,8 @@ import ChatAnimation from "@/components/elements/chat-animation";
 export default function Intelligence() {
   return (
     <section className="py-16 lg:py-21.5">
-      <div className="container-wrapper space-y-12">
-        <div className="text-center max-w-4xl mx-auto lg:translate-y-[26px]">
+      <div className="container-wrapper space-y-12 lg:space-y-16">
+        <div className="text-center max-w-4xl mx-auto">
           <h2 className="secondary-title">On-Ground Intelligence</h2>
         </div>
 

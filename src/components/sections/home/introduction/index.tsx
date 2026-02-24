@@ -4,6 +4,7 @@ import { StickyCard_001 } from "@/components/ui/skiper-ui/skiper16";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import IntroductionCard from "./introduction-card";
+import AnimatedContent from "@/components/reactbits/AnimatedContent";
 
 const Introduction = () => {
   const container = useRef<HTMLDivElement>(null);
@@ -23,7 +24,21 @@ const Introduction = () => {
 
         <div className="grid gap-6 lg:hidden">
           {projects.map((project, i) => (
-            <IntroductionCard key={i} i={i} {...project} />
+            <AnimatedContent
+              key={i}
+              distance={50}
+              direction="vertical"
+              reverse={false}
+              duration={1.2}
+              ease="power3.out"
+              initialOpacity={0.1}
+              animateOpacity
+              scale={1}
+              threshold={0}
+              delay={0.2}
+            >
+              <IntroductionCard i={i} {...project} />
+            </AnimatedContent>
           ))}
         </div>
 
