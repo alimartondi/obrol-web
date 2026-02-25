@@ -61,9 +61,9 @@ const StickyCard_001 = ({
         }}
         className="rounded-4xl relative flex origin-top flex-col overflow-hidden"
       >
-        <div className="relative bg-muted rounded-2xl grid lg:grid-cols-2 p-6 lg:p-12 gap-6 lg:gap-16 overflow-hidden">
+        <div className="relative bg-muted rounded-2xl grid lg:grid-cols-2 p-6 lg:p-12 gap-6 lg:gap-16 overflow-hidden max-h-[calc(100vh-20vh)]">
           <div
-            className={`${i % 2 === 0 ? "order-2" : "order-1"} relative aspect-square bg-muted rounded-xl overflow-hidden`}
+            className={`${i % 2 === 0 ? "order-2" : "order-1"} relative aspect-5/4 bg-muted rounded-xl overflow-hidden`}
           >
             <Image
               src={src}

@@ -15,7 +15,7 @@ export default function IntroductionCard({
   description,
 }: Props) {
   return (
-    <Card className="bg-muted border-0">
+    <Card className="bg-muted border-0 rounded-xl">
       <CardContent className="grid gap-4">
         <div
           className={`${i % 2 === 0 ? "lg:order-2" : "lg:order-1"}
@@ -30,8 +30,12 @@ export default function IntroductionCard({
             className="object-cover"
           />
         </div>
-        <span className="text-3xl font-semibold">0{i + 1}</span>
-        <CardDescription>{description}</CardDescription>
+        <div className="space-y-2">
+          <h3 className="text-3xl font-semibold">0{i + 1}</h3>
+          <CardDescription className="text-pretty">
+            {description}
+          </CardDescription>
+        </div>
       </CardContent>
     </Card>
   );

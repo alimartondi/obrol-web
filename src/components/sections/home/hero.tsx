@@ -12,31 +12,13 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 
 export default function Hero() {
   return (
-    <section className="relative pt-52 xl:pt-64 lg:pb-16 pb-12">
+    <section className="relative pt-40 xl:pt-64 lg:pb-16 pb-12">
       <div className="container-wrapper">
         <div className="relative max-w-5xl md:text-center md:justify-center gap-6 flex flex-col z-10 mx-auto">
-          {/* <AnimatedContent
-            distance={50}
-            direction="vertical"
-            reverse={false}
-            duration={1.2}
-            ease="power3.out"
-            initialOpacity={0.1}
-            animateOpacity
-            scale={1}
-            threshold={0}
-            delay={0.2}
-            className="relative z-10"
-          >
-            <span className="bg-primary/10 w-fit rounded-full py-1.5 px-4 h-10 inline-flex items-center justify-center font-medium text-primary border border-primary/35">
-              Welcome to Obrol
-            </span>
-          </AnimatedContent> */}
-
           <SplitText
             tag="h1"
-            text="Convert Conversations with Your Customers into Commercial Intelligence"
-            className="primary-title overflow-visible text-left! md:text-center!"
+            text="Convert Conversations With Your Customers into Commercial Intelligence"
+            className="primary-title overflow-visible text-left! md:text-center! text-balance"
             delay={100}
             duration={2}
             ease="power3.out"
@@ -128,7 +110,7 @@ export default function Hero() {
           scale={1}
           threshold={0.1}
           delay={0.3}
-          className="relative z-10 mt-16 lg:mt-20"
+          className="relative z-10 mt-16"
         >
           <Image
             src="/images/Obrol-Dashboard.svg"

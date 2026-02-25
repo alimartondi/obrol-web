@@ -36,7 +36,7 @@ export default function Problem() {
       className="py-16 lg:py-21.5 bg-primary lg:min-h-[180vh] space-y-12"
     >
       <div className="container-wrapper lg:mb-56">
-        <div className="text-center max-w-4xl mx-auto text-white lg:sticky lg:top-44 mb-12">
+        <div className="md:text-center max-w-4xl mx-auto text-white  mb-12">
           <h2 className="secondary-title">
             The Problem with Frontline Interactions.
           </h2>
@@ -70,7 +70,21 @@ export default function Problem() {
           ))}
         </div>
 
-        <div className="hidden lg:block">
+        {/* <div className="grid grid-cols-3 gap-6">
+          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl p-6">
+            <p className="text-white">
+              Customer interactions are rarely captured or analysed
+              consistently.
+            </p>
+          </div>
+          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl"></div>
+          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl"></div>
+          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl"></div>
+          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl"></div>
+          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl"></div>
+        </div> */}
+
+        {/* <div className="hidden lg:block">
           <motion.div style={{ y: y1 }} className="grid lg:grid-cols-4">
             <Card className="backdrop-blur-lg bg-muted/35 rounded-xl">
               <CardContent className="grid gap-40">
@@ -142,12 +156,12 @@ export default function Problem() {
               </CardContent>
             </Card>
           </motion.div>
-        </div>
+        </div> */}
       </div>
 
-      <div className="container-wrapper text-center">
-        <div className="text-center max-w-6xl mx-auto text-white lg:sticky top-44">
-          <h2 className="text-2xl lg:text-6xl font-medium text-pretty">
+      <div className="container-wrapper">
+        <div className="text-center max-w-4xl mx-auto text-white lg:sticky top-44">
+          <h2 className="secondary-title text-pretty">
             This disconnect limits performance, wastes resources, and slows down
             decision-making.
           </h2>

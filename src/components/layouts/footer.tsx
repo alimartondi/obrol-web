@@ -62,10 +62,10 @@ export default function Footer() {
           <hr className="opacity-50" />
 
           <div className="text-center flex justify-between">
-            <p className="text-muted/75">
+            <p className="text-muted/75 text-sm">
               &copy; {new Date().getFullYear()} | All rights reserved
             </p>
-            <p className="text-muted/75">powered by Obrol</p>
+            <p className="text-muted/75 text-sm">powered by Obrol</p>
           </div>
         </div>
       </div>
