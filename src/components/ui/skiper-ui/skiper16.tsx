@@ -74,8 +74,8 @@ const StickyCard_001 = ({
             />
           </div>
           <div className={`${i % 2 === 0 ? "order-1" : "order-2"} "space-y-4"`}>
-            <h3 className="text-5xl font-semibold">{i + 1}</h3>
-            <p>{description}</p>
+            {/* <h3 className="text-5xl font-semibold">{i + 1}</h3> */}
+            <p className="text-2xl">{description}</p>
           </div>
         </div>
       </motion.div>

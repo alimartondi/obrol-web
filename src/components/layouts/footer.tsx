@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container-wrapper space-y-12">
         <div className="max-w-5xl mx-auto text-center text-white grid gap-4">
           <h2 className="secondary-title">Get Early Access</h2>
-          <p className="text-pretty">
+          <p className="text-pretty max-w-xl mx-auto">
             Obrol is currently piloting with selected partners across fintech,
             MSME, research, and enterprise sectors.
           </p>
@@ -26,36 +26,38 @@ export default function Footer() {
           </div>
         </div>
 
-        <ul className="text-center text-muted space-y-3">
-          <h6 className="text-xl font-medium">Sections</h6>
-          <li className="text-accent/75">Introduction</li>
-          <li className="text-accent/75">Problem</li>
-          <li className="text-accent/75">Solution</li>
-          <li className="text-accent/75">People</li>
-        </ul>
+        <div className="flex flex-col lg:flex-row gap-12 justify-between items-center">
+          <ul className="text-center text-muted flex flex-col gap-3 lg:flex-row lg:gap-6 items-center">
+            <h6 className="text-xl font-medium lg:hidden">Sections</h6>
+            <li className="text-accent/75">Introduction</li>
+            <li className="text-accent/75">Problem</li>
+            <li className="text-accent/75">Solution</li>
+            <li className="text-accent/75">People</li>
+          </ul>
 
-        <div className="flex justify-center gap-2">
-          <SocialIcon
-            url="https://www.facebook.com/"
-            target="_blank"
-            bgColor="#ffffff"
-            fgColor="#0A52B4"
-            style={{ height: 40, width: 40 }}
-          />
-          <SocialIcon
-            url="https://www.instagram.com/"
-            target="_blank"
-            bgColor="#ffffff"
-            fgColor="#0A52B4"
-            style={{ height: 40, width: 40 }}
-          />
-          <SocialIcon
-            url="https://www.linkedin.com/"
-            target="_blank"
-            bgColor="#ffffff"
-            fgColor="#0A52B4"
-            style={{ height: 40, width: 40 }}
-          />
+          <div className="flex justify-center gap-2">
+            <SocialIcon
+              url="https://www.facebook.com/"
+              target="_blank"
+              bgColor="#ffffff"
+              fgColor="#0A52B4"
+              style={{ height: 40, width: 40 }}
+            />
+            <SocialIcon
+              url="https://www.instagram.com/"
+              target="_blank"
+              bgColor="#ffffff"
+              fgColor="#0A52B4"
+              style={{ height: 40, width: 40 }}
+            />
+            <SocialIcon
+              url="https://www.linkedin.com/"
+              target="_blank"
+              bgColor="#ffffff"
+              fgColor="#0A52B4"
+              style={{ height: 40, width: 40 }}
+            />
+          </div>
         </div>
 
         <div className="grid gap-4">

@@ -10,6 +10,10 @@ import CinematicScroll from "./cinematic-scroll";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 import AnimatedContent from "@/components/reactbits/AnimatedContent";
+import Link from "next/link";
+import clsx from "clsx";
+import { buttonVariants } from "@/components/ui/button";
+import { FileX } from "lucide-react";
 
 export default function Problem() {
   const ref = useRef(null);
@@ -23,9 +27,9 @@ export default function Problem() {
 
   const scale1 = useTransform(scrollYProgress, [0, 1], [0.92, 1]);
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [200, -200]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [100, -150]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [150, -250]);
+  const y1 = useTransform(scrollYProgress, [0, 1], [100, -200]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [100, -350]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [150, -350]);
   const y4 = useTransform(scrollYProgress, [0, 1], [250, -380]);
   const y5 = useTransform(scrollYProgress, [0, 1], [100, -420]);
   const y6 = useTransform(scrollYProgress, [0, 1], [120, -500]);
@@ -36,10 +40,26 @@ export default function Problem() {
       className="py-16 lg:py-21.5 bg-primary lg:min-h-[180vh] space-y-12"
     >
       <div className="container-wrapper lg:mb-56">
-        <div className="md:text-center max-w-4xl mx-auto text-white  mb-12">
-          <h2 className="secondary-title">
-            The Problem with Frontline Interactions.
-          </h2>
+        <div className="md:text-center max-w-4xl lg:sticky top-40 mx-auto text-white mb-12">
+          <div className="space-y-3">
+            <h2 className="secondary-title">
+              The Problem with <br /> Frontline Interactions
+            </h2>
+            <p className="max-w-lg mx-auto">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+              nobis ad enim omnis quos perspiciatis,
+            </p>
+          </div>
+          <div className="hidden lg:flex gap-4 w-full justify-center mt-6">
+            <Link
+              href={"/join-witlist"}
+              className={clsx(
+                buttonVariants({ variant: "tertiary", size: "lg" }),
+              )}
+            >
+              Join waitlist
+            </Link>
+          </div>
         </div>
 
         <div className="grid gap-6 lg:hidden">
@@ -70,25 +90,13 @@ export default function Problem() {
           ))}
         </div>
 
-        {/* <div className="grid grid-cols-3 gap-6">
-          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl p-6">
-            <p className="text-white">
-              Customer interactions are rarely captured or analysed
-              consistently.
-            </p>
-          </div>
-          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl"></div>
-          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl"></div>
-          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl"></div>
-          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl"></div>
-          <div className="aspect-5/4 bg-accent/35 rounded-xl backdrop-blur-xl"></div>
-        </div> */}
-
-        {/* <div className="hidden lg:block">
+        <div className="hidden lg:block">
           <motion.div style={{ y: y1 }} className="grid lg:grid-cols-4">
-            <Card className="backdrop-blur-lg bg-muted/35 rounded-xl">
+            <Card className="backdrop-blur-lg bg-muted/35 rounded-xl border-0">
               <CardContent className="grid gap-40">
-                <div className="h-12 w-12 border rounded-lg"></div>
+                <div className="h-12 w-12 rounded-lg grid place-items-center text-primary bg-muted/50">
+                  <FileX />
+                </div>
                 <CardDescription className="text-white">
                   Customer interactions are rarely captured or analysed
                   consistently.
@@ -156,7 +164,7 @@ export default function Problem() {
               </CardContent>
             </Card>
           </motion.div>
-        </div> */}
+        </div>
       </div>
 
       <div className="container-wrapper">

@@ -12,7 +12,7 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 
 export default function Hero() {
   return (
-    <section className="relative pt-40 xl:pt-64 lg:pb-16 pb-12">
+    <section className="relative pt-52  lg:pb-16 pb-12">
       <div className="container-wrapper">
         <div className="relative max-w-5xl md:text-center md:justify-center gap-6 flex flex-col z-10 mx-auto">
           <SplitText

@@ -1,8 +1,10 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { CheckCircle2 } from "lucide-react";
 
 export const StickyScroll = ({
   content,
@@ -10,7 +12,9 @@ export const StickyScroll = ({
 }: {
   content: {
     title: string;
-    description: string;
+    description?: string;
+    items?: string[];
+    source: string;
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
@@ -67,10 +71,26 @@ export const StickyScroll = ({
       className="relative flex justify-between gap-16"
       ref={ref}
     >
+      <div
+        style={{ background: backgroundGradient }}
+        className={cn(
+          "w-1/2 sticky top-40 hidden h-full aspect-square max-h-[calc(100vh-220px)] overflow-hidden rounded-xl bg-white lg:block",
+          contentClassName,
+        )}
+      >
+        <Image
+          src={content[activeCard].source}
+          alt={content[activeCard].title}
+          fill
+          className="h-full w-full object-cover"
+        />
+        {/* {content[activeCard].content ?? null} */}
+      </div>
+
       <div className="w-1/2 relative flex items-start">
         <div className="max-w-2xl">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div key={item.title + index} className="my-36">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -78,7 +98,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="secondary-title text-slate-100"
+                className="secondary-title text-balance"
               >
                 {item.title}
               </motion.h2>
@@ -89,24 +109,29 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-10 text-slate-300"
+                className="text-kg mt-6 text-muted-foreground"
               >
                 {item.description}
               </motion.p>
+              <motion.ul
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+              >
+                {item.items?.map((item, i) => (
+                  <motion.li
+                    key={item + i}
+                    className="text-kg mt-6 text-muted-foreground flex gap-3"
+                  >
+                    <CheckCircle2 className="size-5 mt-1 text-primary" />
+                    <p className="flex-1">{item}</p>
+                  </motion.li>
+                ))}
+              </motion.ul>
             </div>
           ))}
           <div className="h-22" />
         </div>
-      </div>
-
-      <div
-        style={{ background: backgroundGradient }}
-        className={cn(
-          "w-1/2 sticky top-[120px] hidden h-full aspect-square max-h-[calc(100vh-220px)] overflow-hidden rounded-xl bg-white lg:block",
-          contentClassName,
-        )}
-      >
-        {content[activeCard].content ?? null}
       </div>
     </motion.div>
   );

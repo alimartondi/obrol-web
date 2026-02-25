@@ -57,16 +57,18 @@ export default function Solution() {
           <div className="aspect-square bg-accent rounded-xl"></div>
         </div> */}
 
-        {solutions.map((solution, index) => (
-          <SolutionCard
-            key={index}
-            source={solution.source}
-            title={solution.title}
-            items={solution.items}
-          />
-        ))}
+        <div className="grid gap-8 lg:hidden">
+          {solutions.map((solution, index) => (
+            <SolutionCard
+              key={index}
+              source={solution.source}
+              title={solution.title}
+              items={solution.items}
+            />
+          ))}
+        </div>
 
-        {/* <StickyScrollRevealDemo /> */}
+        <StickyScrollRevealDemo />
         {/* <div className="flex gap-6">
           <div className="w-8/12 bg-accent h-[550px] rounded-xl p-8 space-y-4">
             <h3 className="text-5xl font-medium">Built for the Frontline</h3>

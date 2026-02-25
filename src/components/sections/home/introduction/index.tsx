@@ -16,8 +16,8 @@ const Introduction = () => {
   return (
     <section className="pt-16 pb-16 lg:pt-[60px] lg:pb-[300px]">
       <div className="container-wrapper relative">
-        <div className="md:text-center max-w-3xl mx-auto lg:translate-y-[26px] mb-12">
-          <h2 className="secondary-title">
+        <div className="md:text-center max-w-5xl mx-auto lg:translate-y-[26px] mb-12">
+          <h2 className="secondary-title text-pretty">
             Obrol is Indonesia's First On-Ground Intelligence Platform
           </h2>
         </div>

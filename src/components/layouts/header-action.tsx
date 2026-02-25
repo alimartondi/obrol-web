@@ -8,7 +8,7 @@ export default function HeaderAction() {
         href={"/login"}
         className={buttonVariants({ variant: "default", size: "default" })}
       >
-        Sign in
+        Join waitlist
       </Link>
     </div>
   );

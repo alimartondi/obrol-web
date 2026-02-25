@@ -7,19 +7,13 @@ export default function DesktopMenu() {
   return (
     <ul className="flex gap-8">
       <li>
-        <Link href={"/how-it-works"} className="font-medium">
-          How it Works
-        </Link>
+        <Link href={"/how-it-works"}>How it Works</Link>
       </li>
       <li>
-        <Link href={"/why-obrol"} className="font-medium">
-          Why Obrol
-        </Link>
+        <Link href={"/why-obrol"}>Why Obrol</Link>
       </li>
       <li>
-        <Link href={"/company"} className="font-medium">
-          Company
-        </Link>
+        <Link href={"/company"}>Company</Link>
       </li>
     </ul>
   );

@@ -73,11 +73,11 @@
   }
 
   .primary-title {
-    @apply text-[38px] leading-[1.12] md:text-5xl lg:text-6xl xl:text-7xl font-medium;
+    @apply text-[38px] leading-[1.12] md:text-[52px] lg:text-[64px] 2xl:text-7xl lg:leading-none font-medium tracking-tight;
   }
 
   .secondary-title {
-    @apply text-4xl lg:text-5xl xl:text-6xl font-medium leading-[1.12];
+    @apply text-4xl lg:text-[52px] font-medium leading-[1.12] tracking-tight;
   }
 
   .collapsible-content[data-state="open"] {
