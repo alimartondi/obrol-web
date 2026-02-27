@@ -46,8 +46,8 @@ export default function Problem() {
               The Problem with <br /> Frontline Interactions
             </h2>
             <p className="max-w-lg mx-auto">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
-              nobis ad enim omnis quos perspiciatis,
+              Valuable customer conversations happen every day in the field, but
+              most are never captured or analysed properly.
             </p>
           </div>
           <div className="hidden lg:flex gap-4 w-full justify-center mt-6">

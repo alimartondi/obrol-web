@@ -68,7 +68,9 @@ export default function Solution() {
           ))}
         </div>
 
-        <StickyScrollRevealDemo />
+        <div className="w-full hidden lg:block">
+          <StickyScrollRevealDemo />
+        </div>
         {/* <div className="flex gap-6">
           <div className="w-8/12 bg-accent h-[550px] rounded-xl p-8 space-y-4">
             <h3 className="text-5xl font-medium">Built for the Frontline</h3>

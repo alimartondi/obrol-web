@@ -39,7 +39,7 @@ export default function TeamCard({ team }: TeamCardProps) {
           }}
         >
           <Image
-            src={team.image}
+            src="/images/people/Portrait-Placeholder.png"
             alt={team.name}
             fill
             className="object-cover"
