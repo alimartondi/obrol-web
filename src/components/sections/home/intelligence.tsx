@@ -20,7 +20,7 @@ export default function Intelligence() {
           <h2 className="secondary-title">On-Ground Intelligence</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-3 gap-6">
           {intelligences.map((intelligence, index) => (
             <IntelligenceCard key={index} {...intelligence} />
           ))}
@@ -34,7 +34,7 @@ function IntelligenceCard({ title, description }: IntelligenceItem) {
   return (
     <Card className="rounded-xl border-0 bg-muted p-3 xl:p-3 gap-0">
       <div className="aspect-5/4 bg-linear-to-b from-white rounded-md">
-        <ChatAnimation />
+        {/* <ChatAnimation /> */}
       </div>
       <CardContent className="grid gap-3 pb-3 px-3">
         <CardTitle className="text-primary text-2xl">{title}</CardTitle>

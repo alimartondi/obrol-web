@@ -13,7 +13,14 @@ import AnimatedContent from "@/components/reactbits/AnimatedContent";
 import Link from "next/link";
 import clsx from "clsx";
 import { buttonVariants } from "@/components/ui/button";
-import { FileX } from "lucide-react";
+import {
+  CalendarX,
+  Eye,
+  FileX,
+  Layers,
+  SlidersHorizontal,
+  User,
+} from "lucide-react";
 
 export default function Problem() {
   const ref = useRef(null);
@@ -63,31 +70,37 @@ export default function Problem() {
         </div>
 
         <div className="grid gap-6 lg:hidden">
-          {problems.map((problem, index) => (
-            <AnimatedContent
-              key={index}
-              distance={50}
-              direction="vertical"
-              reverse={false}
-              duration={1.2}
-              ease="power3.out"
-              initialOpacity={0.1}
-              animateOpacity
-              scale={1}
-              threshold={0}
-              delay={0.2}
-              className="relative z-10"
-            >
-              <Card className="backdrop-blur-lg bg-muted/35 rounded-xl border-0">
-                <CardContent className="grid gap-40">
-                  <div className="h-12 w-12 border rounded-lg"></div>
-                  <CardDescription className="text-white">
-                    {problem.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </AnimatedContent>
-          ))}
+          {problems.map((problem, index) => {
+            const Icon = problem.icon;
+
+            return (
+              <AnimatedContent
+                key={index}
+                distance={50}
+                direction="vertical"
+                reverse={false}
+                duration={1.2}
+                ease="power3.out"
+                initialOpacity={0.1}
+                animateOpacity
+                scale={1}
+                threshold={0}
+                delay={0.2}
+                className="relative z-10"
+              >
+                <Card className="backdrop-blur-lg bg-muted/35 rounded-xl border-0">
+                  <CardContent className="grid gap-40">
+                    <div className="h-12 w-12 rounded-lg grid place-items-center text-primary bg-muted/50">
+                      <Icon />
+                    </div>
+                    <CardDescription className="text-white">
+                      {problem.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </AnimatedContent>
+            );
+          })}
         </div>
 
         <div className="hidden lg:block">
@@ -108,10 +121,12 @@ export default function Problem() {
           <motion.div style={{ y: y2 }} className="grid lg:grid-cols-4">
             <Card className="backdrop-blur-lg bg-muted/35 rounded-xl col-start-4">
               <CardContent className="grid gap-40">
-                <div className="h-12 w-12 border rounded-lg"></div>
+                <div className="h-12 w-12 rounded-lg grid place-items-center text-primary bg-muted/50">
+                  <User />
+                </div>
                 <CardDescription className="text-white">
-                  Customer interactions are rarely captured or analysed
-                  consistently.
+                  Reporting is manual or incomplete, pulling time away from
+                  frontline selling and customer experience.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -120,10 +135,12 @@ export default function Problem() {
           <motion.div style={{ y: y3 }} className="grid lg:grid-cols-4">
             <Card className="backdrop-blur-lg bg-muted/35 rounded-xl col-start-2">
               <CardContent className="grid gap-40">
-                <div className="h-12 w-12 border rounded-lg"></div>
+                <div className="h-12 w-12 rounded-lg grid place-items-center text-primary bg-muted/50">
+                  <SlidersHorizontal />
+                </div>
                 <CardDescription className="text-white">
-                  Customer interactions are rarely captured or analysed
-                  consistently.
+                  Information is filtered as it moves up the organisation,
+                  reducing accuracy.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -132,10 +149,12 @@ export default function Problem() {
           <motion.div style={{ y: y4 }} className="grid lg:grid-cols-4">
             <Card className="backdrop-blur-lg bg-muted/35 rounded-xl col-start-4">
               <CardContent className="grid gap-40">
-                <div className="h-12 w-12 border rounded-lg"></div>
+                <div className="h-12 w-12 rounded-lg grid place-items-center text-primary bg-muted/50">
+                  <Eye />
+                </div>
                 <CardDescription className="text-white">
-                  Customer interactions are rarely captured or analysed
-                  consistently.
+                  Limited visibility makes it hard to identify coaching and
+                  improvement opportunities.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -144,10 +163,12 @@ export default function Problem() {
           <motion.div style={{ y: y5 }} className="grid lg:grid-cols-4">
             <Card className="backdrop-blur-lg bg-muted/35 rounded-xl col-start-1">
               <CardContent className="grid gap-40">
-                <div className="h-12 w-12 border rounded-lg"></div>
+                <div className="h-12 w-12 rounded-lg grid place-items-center text-primary bg-muted/50">
+                  <Layers />
+                </div>
                 <CardDescription className="text-white">
-                  Customer interactions are rarely captured or analysed
-                  consistently.
+                  Too many layers sit between the field force and
+                  decision-makers.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -156,10 +177,11 @@ export default function Problem() {
           <motion.div style={{ y: y6 }} className="grid lg:grid-cols-4">
             <Card className="backdrop-blur-lg bg-muted/35 rounded-xl col-start-3">
               <CardContent className="grid gap-40">
-                <div className="h-12 w-12 border rounded-lg"></div>
+                <div className="h-12 w-12 rounded-lg grid place-items-center text-primary bg-muted/50">
+                  <CalendarX />
+                </div>
                 <CardDescription className="text-white">
-                  Customer interactions are rarely captured or analysed
-                  consistently.
+                  By the time insights reach leaders, they are often outdated.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -181,32 +203,32 @@ export default function Problem() {
 
 const problems: ProblemItem[] = [
   {
-    icon: "",
+    icon: FileX,
     description:
       "Customer interactions are rarely captured or analysed consistently",
   },
   {
-    icon: "",
+    icon: User,
     description:
       "Reporting is manual or incomplete, pulling time away from frontline selling and customer experience",
   },
   {
-    icon: "",
+    icon: SlidersHorizontal,
     description:
       "Information is filtered as it moves up the organisation, reducing accuracy",
   },
   {
-    icon: "",
+    icon: Eye,
     description:
       "Limited visibility makes it hard to identify coaching and improvement opportunities",
   },
   {
-    icon: "",
+    icon: Layers,
     description:
       "Too many layers sit between the field force and decision-makers",
   },
   {
-    icon: "",
+    icon: CalendarX,
     description: "By the time insights reach leaders, they are often outdated",
   },
 ];

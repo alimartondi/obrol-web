@@ -39,10 +39,6 @@ export default function TeamSwiper({ teams }: TeamSwiperProps) {
           clickable: true,
         }}
         breakpoints={{
-          560: {
-            slidesPerView: 2.1,
-            spaceBetween: 24,
-          },
           1024: {
             slidesPerView: 3.1,
             spaceBetween: 24,

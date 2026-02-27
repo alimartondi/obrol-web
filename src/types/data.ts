@@ -1,5 +1,7 @@
+import { LucideIcon } from "lucide-react";
+
 export interface ProblemItem {
-  icon: string;
+  icon: LucideIcon;
   description: string;
 }
 

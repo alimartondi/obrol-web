@@ -3,11 +3,16 @@ import type { ProblemItem } from "@/types/data";
 
 type ProblemCardProps = ProblemItem;
 
-export default function ProblemCard({ icon, description }: ProblemCardProps) {
+export default function ProblemCard({
+  icon: Icon,
+  description,
+}: ProblemCardProps) {
   return (
     <Card className="rounded-xl">
       <CardHeader>
-        <div className="h-12 w-12 bg-accent rounded-lg">{icon}</div>
+        <div className="h-12 w-12 bg-accent rounded-lg">
+          <Icon className="w-6 h-6 text-white" />
+        </div>
       </CardHeader>
       <CardContent>{description}</CardContent>
     </Card>
